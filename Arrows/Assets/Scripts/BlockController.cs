@@ -19,10 +19,18 @@ public class BlockController : NetworkBehaviour
 
         foreach (Collider item in nearObjects)
         {
-            if (item.transform.position == dir)
+            if (item.gameObject.name.Contains("layer"))
+            {
                 return false;
-                //Debug.LogError("this: " + item.name +" "+item.transform.position);
+            }
+
+            if (item.transform.position == dir )
+            {
+                return false;
+            }
+                
         }
+
         return true;
 
     }

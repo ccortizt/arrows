@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23221450134324530}
   - component: {fileID: 114763646158400418}
   - component: {fileID: 114629038188585364}
+  - component: {fileID: 114637972190893406}
   m_Layer: 12
   m_Name: Cooldown+
   m_TagString: Untagged
@@ -116,6 +117,17 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114637972190893406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1543374858343820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c697e6894ef8814c8f7cb6311da4d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114763646158400418
 MonoBehaviour:
   m_ObjectHideFlags: 1

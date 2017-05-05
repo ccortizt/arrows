@@ -6,7 +6,7 @@ public class ArrowController : NetworkBehaviour
 {
 
 
-    public ParticleSystem hurtParticle;
+    //public ParticleSystem hurtParticle;
     public float explodeDelay;
     public float explodeArea;
 
@@ -17,7 +17,7 @@ public class ArrowController : NetworkBehaviour
 
     public void OnCollisionEnter(Collision coll)
     {
-        Debug.Log("collision" + coll.gameObject.name.Contains("Player"));
+        //Debug.LogError("collision" + coll.gameObject.name);
         if (coll.gameObject.name.Contains("Player"))
         {
            
@@ -36,7 +36,8 @@ public class ArrowController : NetworkBehaviour
             coll.gameObject.GetComponent<BlockController>().CmdDestroyBlock();
         }
 
-        Debug.Log(coll.gameObject.name);
+        
+
         if (isClient)
             RpcDestroyArrow();
         else

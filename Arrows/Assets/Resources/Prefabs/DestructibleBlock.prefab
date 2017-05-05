@@ -151,9 +151,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d7a55d2e47bea43bef282dd8c8fdb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabMoveBlocks: {fileID: 1373864399454056, guid: 66871187ce1183d42924806a7907505a,
+    type: 2}
+  prefabExplosive: {fileID: 1914380816548804, guid: a25970c469a767f4e90cd99d0a22acf2,
+    type: 2}
   prefabSpeedPlus: {fileID: 1714445881908530, guid: 2628b8ed3ae69c1438c1d86cc20f4cfe,
     type: 2}
   prefabSpeedMinus: {fileID: 1338493111423142, guid: 60853e1ab83ad604ab00a04e56c42515,
+    type: 2}
+  prefabCooldownPlus: {fileID: 1543374858343820, guid: 36818c51d36fd8245ab2fd7bc2c8b4f4,
+    type: 2}
+  prefabCooldownMinus: {fileID: 1739046093420744, guid: 4e47e67f2f9c60e42abe35b6044aeaf9,
+    type: 2}
+  prefabArrowPlus: {fileID: 1236751000211560, guid: 065cbb2ef852bab4fbe1d139504d6cbc,
+    type: 2}
+  prefabArrowMinus: {fileID: 1892278731091292, guid: 657fc32e193ace24fa1ba2fc5cc0c911,
     type: 2}
 --- !u!114 &114717406793233538
 MonoBehaviour:

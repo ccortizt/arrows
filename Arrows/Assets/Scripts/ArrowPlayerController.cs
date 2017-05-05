@@ -5,23 +5,51 @@ using UnityEngine.UI;
 
 public class ArrowPlayerController : NetworkBehaviour
 {
-
-    public float moveSpeed;
-    private Vector3 dir;
-
+    
     private Rigidbody rb;
 
-    public GameObject arrowPrefab;
-    public Transform arrowSpawn;
+    [SerializeField]
+    GameObject arrowPrefab;
+
+    [SerializeField]
+    Transform arrowSpawn;
     //public GameObject shootParticle;
 
-    public float shootCooldown;
+    [SerializeField]
+    float moveSpeed;
+
+    public float MoveSpeed
+    {
+        get { return moveSpeed; }
+        set { moveSpeed = value; }
+    }
+
+    [SerializeField]
+    float shootCooldown;
+
+    public float ShootCooldown
+    {
+        get { return shootCooldown; }
+        set { shootCooldown = value; }
+    }
+
+    private float arrowForce;
+    public float ArrowForce
+    {
+        get { return arrowForce; }
+        set { arrowForce = value; }
+    }   
+
+    private bool canMoveBlocks;
+
+    public bool CanMoveBlocks
+    {
+        get { return canMoveBlocks; }
+        set { canMoveBlocks = value; }
+    }
+
     private bool isTimerActive;
     private float timer;
-
-    public float arrowForce;
-
-    public bool canMoveBlocks;
 
     public override void OnStartLocalPlayer()
     {
@@ -32,24 +60,13 @@ public class ArrowPlayerController : NetworkBehaviour
 
     void Start()
     {
-        //canMoveBlocks = false;
+        canMoveBlocks = false;
+        arrowForce = 6;
         rb = GetComponent<Rigidbody>();
-        //if (GameObject.Find("Player 1") == null)
-        //{
-        //    gameObject.name = "Player 1";
-        //    gameObject.GetComponent<Renderer>().material.color = Color.red;
-        //}
-        //else
-        //{
-        //    gameObject.GetComponent<Renderer>().material.color = Color.blue;
-        //    gameObject.name = "Player 2";
-        //}
-
     }
 
     void Update()
     {
-
 
         if (isTimerActive)
         {
@@ -62,16 +79,13 @@ public class ArrowPlayerController : NetworkBehaviour
             timer = 0;
         } if (timer > 0)
         {
-
             //Canon.GetComponent<Renderer>().material.color = Color.green;
         }
-
-
+        
         rb.velocity = Vector3.zero;
 
         if (Input.GetAxisRaw("Horizontal") > 0.5f)
         {
-
             rb.velocity = new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed, 0f, 0f);
             transform.rotation = Quaternion.Euler(0, 90, 0);
         }

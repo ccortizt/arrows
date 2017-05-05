@@ -17,11 +17,12 @@ public class SceneStageCreator : NetworkBehaviour
 
     private bool[,] stage;
 
+    private string indestructibleName = "iblock";
+    private string destructibleName = "dblock";
 
     void Start()
     {
-        xSize = 22;
-        //ySize = 19;
+        xSize = 22;  //ySize = 19;
         ySize = 16;
      
         SetStageSize();
@@ -40,13 +41,13 @@ public class SceneStageCreator : NetworkBehaviour
              for (int j = 0; j < ySize; j ++)
              {
 
-                 if (Random.Range(1, 10) < 4.5f) //6
+                 if (Random.Range(1, 10) < 4.5f)
                  {
                      if (stage[i, j] == false && !IsFreeSpace(i, j))
                      {
                          GameObject block = Instantiate(prefabDestructibleBlock, new Vector3(i, 0f, j), Quaternion.identity);
                          block.transform.parent = transform;
-                         block.name = "dblock" + i + "_" + j;
+                         block.name = destructibleName + i + "_" + j;
                          NetworkServer.Spawn(block);
                      }
                  }
@@ -75,11 +76,7 @@ public class SceneStageCreator : NetworkBehaviour
 
         return false;
     }
-    
-    void Update()
-    {
-
-    }
+   
 
     private void SetStageSize()
     {
@@ -98,7 +95,6 @@ public class SceneStageCreator : NetworkBehaviour
         for (int i = 1; i < xSize; i += 3)
             for (int j = 1; j < ySize; j += 3)
             {
-                //
                 if (i % 2  == j % 2 )
                 {
                     stage[i, j] = true;
@@ -125,7 +121,7 @@ public class SceneStageCreator : NetworkBehaviour
                 {
                     GameObject block = Instantiate(prefabIndestructibleBlock, new Vector3(i, 0f, j), Quaternion.identity);
                     block.transform.parent = transform;
-                    block.name = "iblock" + i + "_" + j;
+                    block.name = indestructibleName + i + "_" + j;
                     NetworkServer.Spawn(block);
                 }
             }
