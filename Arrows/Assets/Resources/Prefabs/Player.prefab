@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 136997970410719198}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -500,7 +500,8 @@ MonoBehaviour:
   arrowSpawn: {fileID: 4123989024231222}
   moveSpeed: 3
   shootCooldown: 2
-  arrowForce: 3
+  arrowForce: 6
+  canMoveBlocks: 0
 --- !u!136 &136997970410719198
 CapsuleCollider:
   m_ObjectHideFlags: 1

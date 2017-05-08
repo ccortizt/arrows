@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Arrows.unity
     guid: 8a346ea748bc25343b4c4c8a809ac60e
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 258930550947d2942b62fe0b8b91e04e
   - enabled: 0
     path: Assets/Scenes/MainGame.unity
     guid: a2e454d93cb3fda489e7f7b995af16c3

@@ -33,14 +33,16 @@ public class ArrowPlayerController : NetworkBehaviour
         set { shootCooldown = value; }
     }
 
-    private float arrowForce;
+    [SerializeField]
+    float arrowForce;
     public float ArrowForce
     {
         get { return arrowForce; }
         set { arrowForce = value; }
     }   
 
-    private bool canMoveBlocks;
+    [SerializeField]
+    bool canMoveBlocks;
 
     public bool CanMoveBlocks
     {
@@ -60,8 +62,6 @@ public class ArrowPlayerController : NetworkBehaviour
 
     void Start()
     {
-        canMoveBlocks = false;
-        arrowForce = 6;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -165,8 +165,8 @@ public class ArrowPlayerController : NetworkBehaviour
     [Command]
     public void CmdEndGame()
     {
-        //NetworkManager.singleton.ServerChangeScene("Arrows");
-
+        //NetworkManager.singleton.ServerChangeScene("Lose");
+        
     }
 
 }

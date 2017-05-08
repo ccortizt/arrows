@@ -712,7 +712,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb9a146b0b9104db7d71061070e269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hurtParticle: {fileID: 0}
   explodeDelay: 0
   explodeArea: 0
 --- !u!114 &114244707543108482
@@ -746,7 +745,7 @@ MonoBehaviour:
     i14: 205
     i15: 17
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114633146708523806
 MonoBehaviour:
   m_ObjectHideFlags: 1

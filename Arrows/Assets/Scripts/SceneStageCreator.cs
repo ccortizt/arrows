@@ -17,13 +17,13 @@ public class SceneStageCreator : NetworkBehaviour
 
     private bool[,] stage;
 
-    private string indestructibleName = "iblock";
-    private string destructibleName = "dblock";
+    [SerializeField] string indestructibleName = "iblock";
+    [SerializeField] string destructibleName = "dblock";
 
     void Start()
     {
-        xSize = 22;  //ySize = 19;
-        ySize = 16;
+        xSize = 22; //ySize = 19;
+        ySize = 13; // 16
      
         SetStageSize();
 
@@ -100,9 +100,9 @@ public class SceneStageCreator : NetworkBehaviour
                     stage[i, j] = true;
                     //if(i + 1 < xSize)
                     stage[i + 1, j] = true;
-                    // if (j + 1 < xSize)
+                    //if (j + 1 < xSize)
                     stage[i, j + 1] = true;
-                    // if (i + 1 < xSize & j + 1 < ySize)
+                    //if (i + 1 < xSize & j + 1 < ySize)
                     stage[i + 1, j + 1] = true;
                 }
                

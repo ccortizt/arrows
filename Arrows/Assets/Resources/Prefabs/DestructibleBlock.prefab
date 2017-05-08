@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114590644389135478}
   m_Layer: 0
   m_Name: DestructibleBlock
-  m_TagString: Untagged
+  m_TagString: DestructibleBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

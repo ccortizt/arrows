@@ -36,7 +36,6 @@ public class ArrowController : NetworkBehaviour
             coll.gameObject.GetComponent<BlockController>().CmdDestroyBlock();
         }
 
-        
 
         if (isClient)
             RpcDestroyArrow();
